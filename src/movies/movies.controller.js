@@ -30,7 +30,9 @@ const list = async (req, res, next) => {
     req.query.is_showing === "true" &&
       res.json({ data: await moviesService.listMoviesCurrentlyShowing() });
   }
-  res.json({ data: await moviesService.list() });
+  else {
+    res.json({ data: await moviesService.list() });
+  }
 };
 
 module.exports = {
