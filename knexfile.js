@@ -2,7 +2,9 @@ const path = require("path");
 
 require("dotenv").config();
 
-const DATABASE_URL = process.env.DATABASE_URL;
+const {
+DATABASE_URL = "postgres://movies_db_hu7d_user:tj2YKfkmETi3LdpSCieQ1JIhMq5etuoP@dpg-cmk4rl2cn0vc73dmuq1g-a.oregon-postgres.render.com/movies_db_hu7d",
+} = process.env;
 
 module.exports = {
   development: {
