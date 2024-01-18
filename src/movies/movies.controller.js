@@ -26,9 +26,8 @@ const readReviewsByMovie = async (req, res, next) => {
 };
 
 const list = async (req, res, next) => {
-  if (req.query) {
-    req.query.is_showing === "true" &&
-      res.json({ data: await moviesService.listMoviesCurrentlyShowing() });
+  if (req.query.is_showing) {
+    res.json({ data: await moviesService.listMoviesCurrentlyShowing() });
   }
   else {
     res.json({ data: await moviesService.list() });
